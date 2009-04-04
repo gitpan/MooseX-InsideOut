@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'MooseX::InsideOut',
   AUTHOR    => 'Hans\ Dieter\ Pearcey\ \<hdp\@cpan\.org\>',
   ABSTRACT  => 'inside-out objects with Moose',
-  VERSION   => '0.100',
+  VERSION   => '0.101',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

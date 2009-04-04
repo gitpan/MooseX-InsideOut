@@ -9,4 +9,4 @@ requires:
   Class::MOP: 0.80
   Hash::Util::FieldHash::Compat: 0
   Moose: 0.73
-version: 0.100
+version: 0.101

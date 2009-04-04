@@ -1,5 +1,5 @@
 package MooseX::InsideOut::Role::Meta::Instance;
-our $VERSION = '0.100';
+our $VERSION = '0.101';
 
 
 use Moose::Role;
@@ -54,7 +54,7 @@ around inline_create_instance => sub {
   my $next = shift;
   my ($self, $class_variable) = @_;
   my $code = $self->$next($class_variable);
-  $code = "do { {my \$instance = ($code);";
+  $code = "do { my \$instance = ($code);";
   $code .= sprintf(
     '$%s::attr{Scalar::Util::refaddr($instance)} = {};',
     __PACKAGE__,
@@ -82,7 +82,7 @@ MooseX::InsideOut::Role::Meta::Instance
 
 =head1 VERSION
 
-version 0.100
+version 0.101
 
 =head1 DESCRIPTION
 

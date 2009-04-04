@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::InsideOut;
-our $VERSION = '0.100';
+our $VERSION = '0.101';
 
 # ABSTRACT: inside-out objects with Moose
 
@@ -37,7 +37,7 @@ MooseX::InsideOut - inside-out objects with Moose
 
 =head1 VERSION
 
-version 0.100
+version 0.101
 
 =head1 SYNOPSIS
 

@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package InsideOut::SubMoose;
-our $VERSION = '0.100';
+our $VERSION = '0.101';
 
 
 use MooseX::InsideOut;
