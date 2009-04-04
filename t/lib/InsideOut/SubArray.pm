@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package InsideOut::SubArray;
-our $VERSION = '0.101';
+our $VERSION = '0.102';
 
 
 use MooseX::InsideOut;

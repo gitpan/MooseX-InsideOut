@@ -2,11 +2,12 @@
 abstract: inside-out objects with Moose
 author: 
   - Hans Dieter Pearcey <hdp@cpan.org>
-generated_by: Dist::Zilla::Plugin::MetaYaml version 1.003
+generated_by: Dist::Zilla::Plugin::MetaYaml version 1.004
 license: perl
 name: MooseX-InsideOut
 requires: 
   Class::MOP: 0.80
   Hash::Util::FieldHash::Compat: 0
   Moose: 0.73
-version: 0.101
+  namespace::clean: 0.11
+version: 0.102
