@@ -2,9 +2,10 @@ use strict;
 use warnings;
 
 package InsideOut::SubArray;
+our $VERSION = '0.100';
 
-use metaclass 'MooseX::InsideOut::Meta::Class';
-use Moose;
+
+use MooseX::InsideOut;
 extends 'InsideOut::BaseArray';
 
 has sub_foo => ( is => 'rw' );

@@ -2,9 +2,10 @@ use strict;
 use warnings;
 
 package InsideOut::SubIO;
+our $VERSION = '0.100';
 
-use metaclass 'MooseX::InsideOut::Meta::Class';
-use Moose;
+
+use MooseX::InsideOut;
 extends 'InsideOut::BaseIO';
 
 has sub_foo => ( is => 'rw' );

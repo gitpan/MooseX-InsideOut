@@ -1,16 +1,20 @@
-use inc::Module::Install;
 
-name     'MooseX-InsideOut';
-all_from 'lib/MooseX/InsideOut.pm';
-author   'Hans Dieter Pearcey <hdp@pobox.com>';
+use strict;
+use warnings;
 
-build_requires 'Test::More';
+use ExtUtils::MakeMaker;
 
-requires 'Moose'                         => '0.35';
-requires 'Hash::Util::FieldHash::Compat' => 0;
-requires 'Task::Weaken'                  => 0;
-
-auto_install;
-
-WriteAll;
-
+WriteMakefile(
+  DISTNAME  => 'MooseX-InsideOut',
+  NAME      => 'MooseX::InsideOut',
+  AUTHOR    => 'Hans\ Dieter\ Pearcey\ \<hdp\@cpan\.org\>',
+  ABSTRACT  => 'inside-out objects with Moose',
+  VERSION   => '0.100',
+  EXE_FILES => [ qw() ],
+  (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
+  PREREQ_PM    => {
+    "Class::MOP" => '0.80',
+    "Hash::Util::FieldHash::Compat" => '0',
+    "Moose" => '0.73',
+  },
+);

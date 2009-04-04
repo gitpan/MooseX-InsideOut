@@ -2,35 +2,34 @@ use strict;
 use warnings;
 
 package MooseX::InsideOut;
+our $VERSION = '0.100';
 
-use MooseX::InsideOut::Meta::Class;
-BEGIN { require Moose }
-use Carp;
+# ABSTRACT: inside-out objects with Moose
 
-our $VERSION = '0.003';
+use Moose ();
+use Moose::Exporter;
+use Moose::Util::MetaRole;
+use MooseX::InsideOut::Role::Meta::Instance;
 
-sub import {
-  my $class = shift;
-  
-  if (@_) { Carp::confess "$class has no exports" }
+Moose::Exporter->setup_import_methods(
+  also => [ 'Moose' ],
+);
 
-  my $into = caller;
-
-  return if $into eq 'main';
-
-  Moose::init_meta(
-    $into,
-    'Moose::Object',
-    'MooseX::InsideOut::Meta::Class',
+sub init_meta {
+  shift;
+  my %p = @_;
+  Moose->init_meta(%p);
+  Moose::Util::MetaRole::apply_metaclass_roles(
+    for_class                => $p{for_class},
+    instance_metaclass_roles => [ 'MooseX::InsideOut::Role::Meta::Instance' ],
   );
-
-  Moose->import({ into => $into });
-
-  return;
 }
 
 1;
-__END__
+
+
+
+=pod
 
 =head1 NAME
 
@@ -38,39 +37,32 @@ MooseX::InsideOut - inside-out objects with Moose
 
 =head1 VERSION
 
-Version 0.003
+version 0.100
 
 =head1 SYNOPSIS
 
-  package My::Object;
+    package My::Object;
 
-  use MooseX::InsideOut;
+    use MooseX::InsideOut;
 
-  # ... normal Moose functionality
-  # or ...
+    # ... normal Moose functionality
+    # or ...
 
-  package My::Subclass;
+    package My::Subclass;
 
-  use metaclass 'MooseX::InsideOut::Meta::Class';
-  use Moose;
-  extends 'Some::Other::Class';
+    use MooseX::InsideOut;
+    extends 'Some::Other::Class';
 
 =head1 DESCRIPTION
 
-MooseX::InsideOut provides a metaclass and an instance metaclass for inside-out
-objects.
-
-You can use MooseX::InsideOut, as in the first example in the L</SYNOPSIS>.
-This sets up the metaclass and instance metaclass for you, as well as importing
-all of the normal Moose goodies.
-
-You can also use the metaclass C<MooseX::InsideOut::Meta::Class> directly, as
-in the second example.  This is most useful when extending a non-Moose class,
-whose internals you either don't want to care about or aren't hash-based.
+MooseX::InsideOut provides metaroles for inside-out objects.  That is, it sets
+up attribute slot storage somewhere other than inside C<$self>.  This means
+that you can extend non-Moose classes, whose internals you either don't want to
+care about or aren't hash-based.
 
 =head1 TODO
 
-=over
+=over 
 
 =item * dumping (for debugging purposes)
 
@@ -78,56 +70,28 @@ whose internals you either don't want to care about or aren't hash-based.
 
 =item * (your suggestions here)
 
-=back
+=back 
+
+=head1 METHODS
+
+=head2 init_meta
+
+Apply the instance metarole necessary for inside-out storage.
 
 =head1 AUTHOR
 
-Hans Dieter Pearcey, C<< <hdp at pobox.com> >>
+  Hans Dieter Pearcey <hdp@cpan.org>
 
-=head1 BUGS
+=head1 COPYRIGHT AND LICENSE
 
-Please report any bugs or feature requests to C<bug-moosex-insideout at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=MooseX-InsideOut>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
+This software is copyright (c) 2009 by Hans Dieter Pearcey <hdp@cpan.org>.
 
-=head1 SUPPORT
+This is free software; you can redistribute it and/or modify it under
+the same terms as perl itself.
 
-You can find documentation for this module with the perldoc command.
-
-    perldoc MooseX::InsideOut
+=cut 
 
 
-You can also look for information at:
 
-=over 4
+__END__
 
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=MooseX-InsideOut>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/MooseX-InsideOut>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/MooseX-InsideOut>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/MooseX-InsideOut>
-
-=back
-
-
-=head1 ACKNOWLEDGEMENTS
-
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008 Hans Dieter Pearcey.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
-=cut

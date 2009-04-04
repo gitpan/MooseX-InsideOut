@@ -2,6 +2,8 @@ use strict;
 use warnings;
 
 package InsideOut::BaseIO;
+our $VERSION = '0.100';
+
 
 use MooseX::InsideOut;
 

@@ -2,6 +2,8 @@ use strict;
 use warnings;
 
 package InsideOut::BaseHash;
+our $VERSION = '0.100';
+
 
 sub new {
   my $class = shift;

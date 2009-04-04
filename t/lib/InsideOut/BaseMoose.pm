@@ -2,6 +2,8 @@ use strict;
 use warnings;
 
 package InsideOut::BaseMoose;
+our $VERSION = '0.100';
+
 
 use Moose;
 
