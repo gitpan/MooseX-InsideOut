@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package InsideOut::BaseArray;
-our $VERSION = '0.102';
+our $VERSION = '0.103';
 
 
 use constant FOO => 0;

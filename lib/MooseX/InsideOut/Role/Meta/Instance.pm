@@ -1,5 +1,5 @@
 package MooseX::InsideOut::Role::Meta::Instance;
-our $VERSION = '0.102';
+our $VERSION = '0.103';
 
 
 use Moose::Role;
@@ -82,7 +82,7 @@ MooseX::InsideOut::Role::Meta::Instance
 
 =head1 VERSION
 
-version 0.102
+version 0.103
 
 =head1 DESCRIPTION
 

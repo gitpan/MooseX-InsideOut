@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package InsideOut::SubHash;
-our $VERSION = '0.102';
+our $VERSION = '0.103';
 
 
 use MooseX::InsideOut;
