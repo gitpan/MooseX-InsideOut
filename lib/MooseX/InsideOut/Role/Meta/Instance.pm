@@ -1,5 +1,5 @@
 package MooseX::InsideOut::Role::Meta::Instance;
-our $VERSION = '0.103';
+our $VERSION = '0.104';
 
 
 use Moose::Role;
@@ -82,7 +82,7 @@ MooseX::InsideOut::Role::Meta::Instance
 
 =head1 VERSION
 
-version 0.103
+version 0.104
 
 =head1 DESCRIPTION
 
@@ -109,6 +109,8 @@ Meta-instance role implementing inside-out storage.
 =head2 inline_slot_access
 
 See L<Class::MOP::Instance>.
+
+
 
 =head1 AUTHOR
 

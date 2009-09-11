@@ -1,13 +1,16 @@
---- 
-abstract: inside-out objects with Moose
-author: 
-  - Hans Dieter Pearcey <hdp@cpan.org>
-generated_by: Dist::Zilla::Plugin::MetaYaml version 1.004
+---
+abstract: 'inside-out objects with Moose'
+author:
+  - 'Hans Dieter Pearcey <hdp@cpan.org>'
+generated_by: 'Dist::Zilla::Plugin::MetaYAML version 1.092450'
 license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: MooseX-InsideOut
-requires: 
+requires:
   Class::MOP: 0.80
   Hash::Util::FieldHash::Compat: 0
   Moose: 0.73
   namespace::clean: 0.11
-version: 0.103
+version: 0.104

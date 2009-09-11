@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package MooseX::InsideOut;
-our $VERSION = '0.103';
+our $VERSION = '0.104';
 
 # ABSTRACT: inside-out objects with Moose
 
@@ -37,21 +37,21 @@ MooseX::InsideOut - inside-out objects with Moose
 
 =head1 VERSION
 
-version 0.103
+version 0.104
 
 =head1 SYNOPSIS
 
-    package My::Object;
+  package My::Object;
 
-    use MooseX::InsideOut;
+  use MooseX::InsideOut;
 
-    # ... normal Moose functionality
-    # or ...
+  # ... normal Moose functionality
+  # or ...
 
-    package My::Subclass;
+  package My::Subclass;
 
-    use MooseX::InsideOut;
-    extends 'Some::Other::Class';
+  use MooseX::InsideOut;
+  extends 'Some::Other::Class';
 
 =head1 DESCRIPTION
 
@@ -71,6 +71,8 @@ care about or aren't hash-based.
 =item * (your suggestions here)
 
 =back 
+
+
 
 =head1 METHODS
 
