@@ -2,8 +2,6 @@ use strict;
 use warnings;
 
 package InsideOut::BaseArray;
-our $VERSION = '0.104';
-
 
 use constant FOO => 0;
 

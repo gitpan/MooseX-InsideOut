@@ -2,7 +2,11 @@
 abstract: 'inside-out objects with Moose'
 author:
   - 'Hans Dieter Pearcey <hdp@cpan.org>'
-generated_by: 'Dist::Zilla::Plugin::MetaYAML version 1.092450'
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.102340, CPAN::Meta::Converter version 2.101670'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -11,6 +15,6 @@ name: MooseX-InsideOut
 requires:
   Class::MOP: 0.80
   Hash::Util::FieldHash::Compat: 0
-  Moose: 0.73
+  Moose: 0.94
   namespace::clean: 0.11
-version: 0.104
+version: 0.105

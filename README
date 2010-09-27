@@ -1,12 +1,13 @@
 
 
-This archive contains the distribution MooseX-InsideOut, version
-0.104:
+This archive contains the distribution MooseX-InsideOut,
+version 0.105:
 
   inside-out objects with Moose
 
-This software is copyright (c) 2009 by Hans Dieter Pearcey <hdp@cpan.org>.
+This software is copyright (c) 2010 by Hans Dieter Pearcey <hdp@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
-the same terms as perl itself.
+the same terms as the Perl 5 programming language system itself.
+
 

@@ -1,6 +1,7 @@
 package MooseX::InsideOut::Role::Meta::Instance;
-our $VERSION = '0.104';
-
+BEGIN {
+  $MooseX::InsideOut::Role::Meta::Instance::VERSION = '0.105';
+}
 
 use Moose::Role;
 
@@ -73,7 +74,6 @@ sub inline_slot_access {
 
 
 
-
 =pod
 
 =head1 NAME
@@ -82,7 +82,7 @@ MooseX::InsideOut::Role::Meta::Instance
 
 =head1 VERSION
 
-version 0.104
+version 0.105
 
 =head1 DESCRIPTION
 
@@ -110,21 +110,18 @@ Meta-instance role implementing inside-out storage.
 
 See L<Class::MOP::Instance>.
 
-
-
 =head1 AUTHOR
 
-  Hans Dieter Pearcey <hdp@cpan.org>
+Hans Dieter Pearcey <hdp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Hans Dieter Pearcey <hdp@cpan.org>.
+This software is copyright (c) 2010 by Hans Dieter Pearcey <hdp@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
-the same terms as perl itself.
+the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 
 
 __END__
