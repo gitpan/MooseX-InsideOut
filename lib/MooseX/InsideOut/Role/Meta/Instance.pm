@@ -1,6 +1,6 @@
 package MooseX::InsideOut::Role::Meta::Instance;
 BEGIN {
-  $MooseX::InsideOut::Role::Meta::Instance::VERSION = '0.105';
+  $MooseX::InsideOut::Role::Meta::Instance::VERSION = '0.106';
 }
 
 use Moose::Role;
@@ -82,7 +82,7 @@ MooseX::InsideOut::Role::Meta::Instance
 
 =head1 VERSION
 
-version 0.105
+version 0.106
 
 =head1 DESCRIPTION
 
@@ -116,7 +116,7 @@ Hans Dieter Pearcey <hdp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Hans Dieter Pearcey <hdp@cpan.org>.
+This software is copyright (c) 2011 by Hans Dieter Pearcey <hdp@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

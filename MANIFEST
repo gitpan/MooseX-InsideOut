@@ -16,8 +16,6 @@ t/lib/InsideOut/SubArray.pm
 t/lib/InsideOut/SubHash.pm
 t/lib/InsideOut/SubIO.pm
 t/lib/InsideOut/SubMoose.pm
-t/pod-coverage.t
-t/pod.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
 t/sub.t

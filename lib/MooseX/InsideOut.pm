@@ -3,7 +3,7 @@ use warnings;
 
 package MooseX::InsideOut;
 BEGIN {
-  $MooseX::InsideOut::VERSION = '0.105';
+  $MooseX::InsideOut::VERSION = '0.106';
 }
 # ABSTRACT: inside-out objects with Moose
 
@@ -39,7 +39,7 @@ MooseX::InsideOut - inside-out objects with Moose
 
 =head1 VERSION
 
-version 0.105
+version 0.106
 
 =head1 SYNOPSIS
 
@@ -86,7 +86,7 @@ Hans Dieter Pearcey <hdp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Hans Dieter Pearcey <hdp@cpan.org>.
+This software is copyright (c) 2011 by Hans Dieter Pearcey <hdp@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
